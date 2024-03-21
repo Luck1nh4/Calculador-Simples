@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Calculadora</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            color: #b44c4c;
+        }
+
+        .container {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            background: linear-gradient(to right, #202020, #4b4b4b);
+            height: 100vh;
+            width: 100vw;
+            background-size: cover;
+            flex-direction: column;
+            text-align: center;
+        }
+
+        h1 {
+            font-size: 45px;
+            color: #e0b0b0;
+        }
+
+        .ope {
+            padding-top: 20px;
+            font-size: 22px;
+        }
+
+        .num {
+            font-size: 22px;
+            padding-top: 25px;
+            flex-direction: column;
+        }
+
+        select {
+            text-align: center;
+            font-size: 17px;
+            font-weight: bold;
+            border: none;
+        }
+
+        input {
+            font-size: 16px;
+            padding-left: 8px;
+            border: none;
+        }
+
+        button {
+            display: flex;
+            margin-top: 20px;
+            cursor: pointer;
+            font-size: 18px;
+            width: 76px;
+            height: 25px;
+            margin-left: 150px;
+            padding: 1px 2px;
+            border: 1px solid #000;
+        }
+
+        button:hover {
+            transform: scale(1.1);
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container">
+        <h1>Calculadora</h1>
+        <div class="info">
+
+            <form class="ope">Escolha uma das 4 operações:
+                <select id="operacoes">
+                    <option value="1">Adição</option>
+                    <option value="2">Subtração</option>
+                    <option value="3">Multiplicação</option>
+                    <option value="4">Divisão</option>
+                </select>
+            </form>
+            <form class="num">
+                <div>
+                    Digite o primero valor:
+                    <input type="number" id="numero">
+                </div>
+                <div>
+                    Digite o segundo valor:
+                    <input type="number" id="numero_2">
+                </div>
+            </form>
+            <div>
+                <button id="calc">Calcular</button>
+            </div>
+        </div>
+
+        <div class="resultado">
+            <span></span>
+        </div>
+    </div>
+    <script src="script.js"></script>
+</body>
+
+</html>
